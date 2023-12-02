@@ -2,7 +2,6 @@
 // @name         Tanulásmódszertan kérdőív kitöltő
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Completes Google Forms radio button questions randomly
 // @author       B.Kristóf
 // @match        *://docs.google.com/forms/*
 // @grant        none
