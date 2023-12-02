@@ -30,6 +30,6 @@
       });
     }
 
-    // Run the form completion script when the page has loaded
+    // Futtatja az űrlapkitöltő szkriptet, amikor az oldal betöltődött
     window.addEventListener('load', completeForm);
 })();
