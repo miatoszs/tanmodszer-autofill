@@ -1,3 +1,4 @@
+
 // ==UserScript==
 // @name         Tanulásmódszertan kérdőív kitöltő
 // @namespace    http://tampermonkey.net/
@@ -32,7 +33,7 @@
       // Prompt the user for their name
       const neptuncode = prompt("Mi a neptun kódód?");
 
-      if (name) {
+      if (neptuncode) {
         // Find the last text input field (assuming it's for the name)
         const textInputs = document.querySelectorAll('input[type="text"]');
         if (textInputs.length > 0) {
