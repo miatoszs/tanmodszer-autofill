@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Tanulásmódszertan kérdőív kitöltő
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @author       B.Kristóf
 // @match        *://docs.google.com/forms/*
 // @grant        none
-// @downloadURL https://raw.githubusercontent.com/miatoszs/tanmodszer-autofill/main/script.js
-// @description kitőlti autómatikusan a kérdőívet
+// @downloadURL  https://raw.githubusercontent.com/miatoszs/tanmodszer-autofill/main/script.js
+// @description  kitőlti autómatikusan a kérdőívet
 // ==/UserScript==
 
 (function() {
@@ -28,8 +28,20 @@
           randomButton.click();
         }
       });
+
+      // Prompt the user for their name
+      const neptuncode = prompt("Mi a neptun kódód?");
+
+      if (name) {
+        // Find the last text input field (assuming it's for the name)
+        const textInputs = document.querySelectorAll('input[type="text"]');
+        if (textInputs.length > 0) {
+          const lastNameInput = textInputs[textInputs.length - 1];
+          lastNameInput.value = neptuncode;
+        }
+      }
     }
 
-    // Futtatja az űrlapkitöltő szkriptet, amikor az oldal betöltődött
+    // Run the form filler when the page has loaded
     window.addEventListener('load', completeForm);
 })();
