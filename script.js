@@ -6,6 +6,8 @@
 // @author       B.Kristóf
 // @match        *://docs.google.com/forms/*
 // @grant        none
+// @downloadURL https://raw.githubusercontent.com/miatoszs/tanmodszer-autofill/main/script.js
+// @description kitőlti autómatikusan a kérdőívet
 // ==/UserScript==
 
 (function() {
